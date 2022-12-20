@@ -1,0 +1,301 @@
+html,
+body
+{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  color: #444444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+canvas {
+  outline: none;
+}
+
+#instructions {
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  text-align: center;
+
+  cursor: pointer;
+}
+#instructions span {
+  font-size: 40px;
+}
+
+* {
+  touch-action: manipulation;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.gallery{
+  position:relative;
+  height:10%;
+  width:10%;
+  left: 18px;
+}
+
+.gallery:after{
+  content:'';
+}
+
+.shadow{
+  position: absolute;
+  top: 500px;
+  left: 100px;
+  width: 500px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(#805d78,rgba(0,0,0,0) 70%);
+}
+
+img{
+  width:var(--width);
+  height:var(--height);
+}
+
+.clipped-border{
+  -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+   clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+   padding:5px;
+   background:rgb(255, 255, 255);
+   width:var(--border-width);
+   height:var(--border-height);
+   max-height:250px;
+   max-width:250px;
+   height: var(--height);
+   width:var(--width);
+   transition:transform 0.2s;
+   position:absolute;
+   cursor:pointer;
+}
+
+
+
+.clipped-border:before{
+  content:'';
+  position:absolute;
+  opacity:0.5;
+  width:350px;
+  height:70px;
+  background:rgb(247, 103, 103);
+  top:0;
+  left:0;
+  z-index:1;
+  transform:rotate(45deg);
+  transition:transform 0.5s;
+}
+
+.clipped-border:hover:before{
+  transform: translate(-100px,400%) rotate(45deg);
+  transition:transform 0.5s;
+}
+
+.clipped-border:nth-child(2){
+  left:65px;
+}
+
+.clipped-border:nth-child(3){
+  left:130px;
+}
+
+
+
+#clipped {
+  -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+  
+  }
+  
+  .clipped-border:hover{
+    transform:scale(1.2);
+    transition:transform 0.2s;
+    z-index:10;
+  }
+  
+
+.frame {
+    top: 0;
+    position: absolute;
+    left: 0;
+    padding: 1rem;
+}
+
+.frame__title {
+    font-size: 1rem;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+}
+
+.frame__links {
+    display: inline-block;
+    margin: 0 2rem;
+    text-transform: lowercase;
+}
+
+.frame__links a {
+    display: inline-block;
+    margin: 0 0.25rem;
+    text-decoration: none;
+    color: red;
+}
+
+.frame__links a:focus,
+.frame__links a:hover {
+    text-decoration: underline;
+}
+
+.webgl
+{
+  width: 100%;
+  height: 100%;
+  display: block;
+  top: 0;
+  left: 0;
+}
+
+.controls {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.option__title {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+}
+
+
+.options {
+  position: absolute;
+  left: 0;
+  bottom: 100;
+}
+
+.option {
+  margin-bottom: 3px;
+  padding: 20px;
+  height: 150px;
+  width: 100px;
+  display: flex;
+  justify-content: left;
+  cursor: pointer;
+}
+
+
+
+.option img {
+  height: 100%;
+  width: auto;
+  pointer-events: none;
+  border-right: 5px solid rgb(255, 0, 0);
+}
+
+
+
+.info {
+  padding: 0 5em;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.info p {
+  margin-top: 0;
+}
+
+.frame__title {
+  font-size:x-large;
+}
+
+
+.tray {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.tray__slide {
+  position: absolute;
+  display: flex;
+  left: 0;
+  /*   transform: translateX(-50%);
+animation: wheelin 1s 2s ease-in-out forwards; */
+}
+
+.tray__swatch {
+  transition: 0.1s ease-in;
+  height: 50px;
+  min-width: 50px;
+  flex: 1;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  background-size: cover;
+  background-position: center;
+}
+
+.tray__swatch:nth-child(5n+5) {
+  margin-right: 20px;
+}
+.screenshot{
+  position:relative;
+  height:10%;
+  width:10%;
+  left: 18px;
+}
+
+#screenshot {
+  left: 18px;
+  top: 10px;
+  size: 100em;
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+#screenshot:hover {
+ 
+  border-right: 4px solid rgb(255, 255, 255);
+}
+#screenshot:focus {
+  outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+

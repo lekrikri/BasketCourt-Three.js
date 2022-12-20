@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terrain de basket threeJS</title>
+    <meta name="description" content="Terrain de basketball en threeJS" />
+    <meta name="keywords" content="three.js, color customizer, app, tutorial, 3d model, blender, javascript" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:500,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Instructions -->
+    <div id="instructions">
+        <span>Click to play</span>
+        <br />
+        (W,A,S,D = Move, SPACE = Jump, MOUSE = Look, CLICK = Shoot)
+    </div>
+    <!-- For change basket court -->
+    <div class="options">
+        <div class="option" data-option="basketball court">
+            <img src="basket_court_button.png" alt="" />
+            <h1 class="option__title">Choose your basketball court</h1>
+        </div>
+        <div class = "gallery">
+            <div class="clipped-border">
+              <img src="wood1_.jpg" id="parquet1" value="Parquet 1">
+            </div>
+            <div class="clipped-border">
+              <img src="wood2_.jpg" id="parquet2" value="Parquet 2">
+            </div>
+            <div class="clipped-border">
+                <img src="wood3_.jpg" id="parquet3" value="Parquet 3">
+              </div>
+            <div class = "shadow"></div>
+          </div>
+    </div>
+    <!-- The canvas element is used to draw the 3D scene -->
+    <!-- <canvas class="webgl"></canvas> 
+    <div class="controls">
+        <div class="info">
+            <div class="info__message">
+                <p>scene create by <strong>&nbsp;Christophe Ganou&nbsp;</strong> for<strong>&nbsp;Basicom3D&nbsp;</strong> 2022</p>
+            </div>
+        </div>
+        <!-- This tray will be filled with colors via JS, and the ability to slide this panel will be added in with a lightweight slider script (no dependency used for this) -->
+        <div id="js-tray" class="tray">
+            <div id="js-tray-slide" class="tray__slide"></div>
+        </div>
+    </div>
+    <!-- This tray will be filled with colors via JS, and the ability to slide this panel will be added in with a lightweight slider script (no dependency used for this) -->
+    <div class="frame">
+		<h1 class="frame__title">Terrain de basket App with Three.js</h1>
+		<div class="frame__links">
+			<a href="https://mon-salon-threejs.vercel.app/"> My previous Three.JS scene</a>
+		</div>
+        <div class="screenshot">
+            <img src="screenshot.png"  value="Take a picture" id="screenshot">
+        </div>
+            
+           
+</body>
+</html>
